@@ -12,6 +12,13 @@
 		526A394022A831ED002AD977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526A393F22A831ED002AD977 /* Assets.xcassets */; };
 		526A394322A831ED002AD977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526A394122A831ED002AD977 /* LaunchScreen.storyboard */; };
 		526A394B22A839AD002AD977 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A394A22A839AD002AD977 /* SecondViewController.swift */; };
+		526A395022A83F84002AD977 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A394F22A83F84002AD977 /* MainViewController.swift */; };
+		526A395722A84007002AD977 /* MainViewWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A395622A84007002AD977 /* MainViewWireFrame.swift */; };
+		526A395922A84069002AD977 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A395822A84069002AD977 /* MainViewPresenter.swift */; };
+		526A395B22A840CE002AD977 /* MainViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A395A22A840CE002AD977 /* MainViewInterface.swift */; };
+		526A395D22A841F8002AD977 /* MainViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A395C22A841F8002AD977 /* MainViewInteractor.swift */; };
+		526A396022A843D1002AD977 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A395F22A843D1002AD977 /* BaseViewController.swift */; };
+		526A396322A84E31002AD977 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A396222A84E31002AD977 /* UILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		526A394222A831ED002AD977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		526A394422A831ED002AD977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		526A394A22A839AD002AD977 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		526A394F22A83F84002AD977 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		526A395622A84007002AD977 /* MainViewWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWireFrame.swift; sourceTree = "<group>"; };
+		526A395822A84069002AD977 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		526A395A22A840CE002AD977 /* MainViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInterface.swift; sourceTree = "<group>"; };
+		526A395C22A841F8002AD977 /* MainViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInteractor.swift; sourceTree = "<group>"; };
+		526A395F22A843D1002AD977 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		526A396222A84E31002AD977 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,9 @@
 		526A393722A831EC002AD977 /* TestSalinas */ = {
 			isa = PBXGroup;
 			children = (
+				526A396122A84E0B002AD977 /* Extension */,
+				526A395E22A843BB002AD977 /* Commons */,
+				526A394C22A83F20002AD977 /* Sections */,
 				526A393822A831EC002AD977 /* AppDelegate.swift */,
 				526A393A22A831EC002AD977 /* ViewController.swift */,
 				526A394A22A839AD002AD977 /* SecondViewController.swift */,
@@ -62,6 +79,90 @@
 				526A394422A831ED002AD977 /* Info.plist */,
 			);
 			path = TestSalinas;
+			sourceTree = "<group>";
+		};
+		526A394C22A83F20002AD977 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				526A394E22A83F63002AD977 /* SecondView */,
+				526A394D22A83F50002AD977 /* MainView */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		526A394D22A83F50002AD977 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				526A395522A83FC0002AD977 /* Router */,
+				526A395422A83FB3002AD977 /* Entity */,
+				526A395322A83FAB002AD977 /* Presenter */,
+				526A395222A83FA2002AD977 /* Interactor */,
+				526A395122A83F96002AD977 /* View */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		526A394E22A83F63002AD977 /* SecondView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SecondView;
+			sourceTree = "<group>";
+		};
+		526A395122A83F96002AD977 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526A394F22A83F84002AD977 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		526A395222A83FA2002AD977 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				526A395A22A840CE002AD977 /* MainViewInterface.swift */,
+				526A395C22A841F8002AD977 /* MainViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		526A395322A83FAB002AD977 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				526A395822A84069002AD977 /* MainViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		526A395422A83FB3002AD977 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		526A395522A83FC0002AD977 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				526A395622A84007002AD977 /* MainViewWireFrame.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		526A395E22A843BB002AD977 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				526A395F22A843D1002AD977 /* BaseViewController.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		526A396122A84E0B002AD977 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				526A396222A84E31002AD977 /* UILabel.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +235,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526A396322A84E31002AD977 /* UILabel.swift in Sources */,
 				526A394B22A839AD002AD977 /* SecondViewController.swift in Sources */,
 				526A393B22A831EC002AD977 /* ViewController.swift in Sources */,
+				526A395922A84069002AD977 /* MainViewPresenter.swift in Sources */,
 				526A393922A831EC002AD977 /* AppDelegate.swift in Sources */,
+				526A395B22A840CE002AD977 /* MainViewInterface.swift in Sources */,
+				526A396022A843D1002AD977 /* BaseViewController.swift in Sources */,
+				526A395022A83F84002AD977 /* MainViewController.swift in Sources */,
+				526A395D22A841F8002AD977 /* MainViewInteractor.swift in Sources */,
+				526A395722A84007002AD977 /* MainViewWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
