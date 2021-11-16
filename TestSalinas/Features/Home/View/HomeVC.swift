@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeVC: BaseViewController {
-    var dataSource = ["Hola", "Migue"]
+    var dataSource = ["Input", "Tomar Selfie", "Una gráfica o representación gráfica es un tipo de representación de datos, generalmente numéricos, mediante recursos visuales (líneas, vectores, superficies o símbolos), para que se manifieste visualmente la relación matemática o correlación estadística que guardan entre sí. También es el nombre de un conjunto de puntos que se plasman en coordenadas cartesianas y sirven para analizar el comportamiento de un proceso o un conjunto de elementos o signos que permiten la interpretación de un fenómeno. La representación gráfica permite establecer valores que no se han obtenido experimentalmente sino mediante la interpolación (lectura entre puntos) y la extrapolación (valores fuera del intervalo experimental)."]
     @IBOutlet weak var tableView: UITableView!
     var presenter: HomePresenterProtocol?
 
@@ -18,6 +18,7 @@ class HomeVC: BaseViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: InputTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: InputTableViewCell.identifier)
         tableView.register(UINib(nibName: ActionTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ActionTableViewCell.identifier)
+        tableView.register(UINib(nibName: DescriptionTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: DescriptionTableViewCell.identifier)
     }
 }
 /// Protocolo para recibir datos de presenter.
@@ -35,10 +36,17 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             return cell
-        case 1:
+        case 1, 2:
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: ActionTableViewCell.identifier) as? ActionTableViewCell else {
                 return UITableViewCell()
             }
+            cell.setupCell(text: dataSource[indexPath.row])
+            return cell
+        case 3:
+            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: DescriptionTableViewCell.identifier) as? DescriptionTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.setupCell(text: dataSource[indexPath.row], align: .justified)
             return cell
         default:
             return UITableViewCell()
@@ -51,6 +59,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             return 60
         case 1:
             return 70
+        case 2:
+            return 400
         default:
             return 45
         }
@@ -61,6 +71,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             ImagePickerManager().pickImage(self) { image in
                 self.showPhoto(image: image)
             }
+        case 2:
+            print("Hohd")
         default:
             break
         }

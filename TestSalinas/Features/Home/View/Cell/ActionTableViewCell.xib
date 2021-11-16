@@ -17,19 +17,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomar Selfie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TB-Gi-B9g">
-                        <rect key="frame" x="113" y="11.5" width="94.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomar Selfie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TB-Gi-B9g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3TB-Gi-B9g" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Kei-ZI-EAe"/>
-                    <constraint firstItem="3TB-Gi-B9g" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="P5V-qg-vty"/>
+                    <constraint firstItem="3TB-Gi-B9g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DJa-OC-FAw"/>
+                    <constraint firstItem="3TB-Gi-B9g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ldi-Uo-eHf"/>
+                    <constraint firstAttribute="trailing" secondItem="3TB-Gi-B9g" secondAttribute="trailing" id="Sbs-8j-7oQ"/>
+                    <constraint firstAttribute="bottom" secondItem="3TB-Gi-B9g" secondAttribute="bottom" id="vtC-AL-S17"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="3TB-Gi-B9g" id="RXg-ef-71g"/>
+            </connections>
             <point key="canvasLocation" x="139" y="127"/>
         </tableViewCell>
     </objects>

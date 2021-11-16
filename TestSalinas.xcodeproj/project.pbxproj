@@ -27,6 +27,14 @@
 		F271A04527433D6A0099D9B5 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A04427433D6A0099D9B5 /* ImagePickerManager.swift */; };
 		F271A048274348B70099D9B5 /* ShowPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A046274348B70099D9B5 /* ShowPhotoVC.swift */; };
 		F271A049274348B70099D9B5 /* ShowPhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F271A047274348B70099D9B5 /* ShowPhotoVC.xib */; };
+		F271A04C27434D610099D9B5 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A04A27434D610099D9B5 /* DescriptionTableViewCell.swift */; };
+		F271A04D27434D610099D9B5 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F271A04B27434D610099D9B5 /* DescriptionTableViewCell.xib */; };
+		F271A0562743527A0099D9B5 /* GraphicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A0502743527A0099D9B5 /* GraphicPresenter.swift */; };
+		F271A0572743527A0099D9B5 /* GraphicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A0512743527A0099D9B5 /* GraphicRouter.swift */; };
+		F271A0582743527A0099D9B5 /* GraphicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A0522743527A0099D9B5 /* GraphicInteractor.swift */; };
+		F271A0592743527A0099D9B5 /* GraphicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A0532743527A0099D9B5 /* GraphicProtocol.swift */; };
+		F271A05D274352B50099D9B5 /* GraphicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A05B274352B50099D9B5 /* GraphicVC.swift */; };
+		F271A05E274352B50099D9B5 /* GraphicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F271A05C274352B50099D9B5 /* GraphicVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +62,14 @@
 		F271A04427433D6A0099D9B5 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		F271A046274348B70099D9B5 /* ShowPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoVC.swift; sourceTree = "<group>"; };
 		F271A047274348B70099D9B5 /* ShowPhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowPhotoVC.xib; sourceTree = "<group>"; };
+		F271A04A27434D610099D9B5 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		F271A04B27434D610099D9B5 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		F271A0502743527A0099D9B5 /* GraphicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicPresenter.swift; sourceTree = "<group>"; };
+		F271A0512743527A0099D9B5 /* GraphicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicRouter.swift; sourceTree = "<group>"; };
+		F271A0522743527A0099D9B5 /* GraphicInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicInteractor.swift; sourceTree = "<group>"; };
+		F271A0532743527A0099D9B5 /* GraphicProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicProtocol.swift; sourceTree = "<group>"; };
+		F271A05B274352B50099D9B5 /* GraphicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicVC.swift; sourceTree = "<group>"; };
+		F271A05C274352B50099D9B5 /* GraphicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphicVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,7 @@
 		526A394C22A83F20002AD977 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F271A04E274352250099D9B5 /* Graphic */,
 				F271A02C27431F280099D9B5 /* Home */,
 			);
 			path = Features;
@@ -206,6 +223,8 @@
 				F271A038274324520099D9B5 /* InputTableViewCell.xib */,
 				F271A040274335110099D9B5 /* ActionTableViewCell.swift */,
 				F271A041274335110099D9B5 /* ActionTableViewCell.xib */,
+				F271A04A27434D610099D9B5 /* DescriptionTableViewCell.swift */,
+				F271A04B27434D610099D9B5 /* DescriptionTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -216,6 +235,19 @@
 				F271A03C27432A6B0099D9B5 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		F271A04E274352250099D9B5 /* Graphic */ = {
+			isa = PBXGroup;
+			children = (
+				F271A0502743527A0099D9B5 /* GraphicPresenter.swift */,
+				F271A0512743527A0099D9B5 /* GraphicRouter.swift */,
+				F271A0522743527A0099D9B5 /* GraphicInteractor.swift */,
+				F271A0532743527A0099D9B5 /* GraphicProtocol.swift */,
+				F271A05B274352B50099D9B5 /* GraphicVC.swift */,
+				F271A05C274352B50099D9B5 /* GraphicVC.xib */,
+			);
+			path = Graphic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +317,8 @@
 				F271A03A274324520099D9B5 /* InputTableViewCell.xib in Resources */,
 				F271A043274335110099D9B5 /* ActionTableViewCell.xib in Resources */,
 				F271A049274348B70099D9B5 /* ShowPhotoVC.xib in Resources */,
+				F271A05E274352B50099D9B5 /* GraphicVC.xib in Resources */,
+				F271A04D27434D610099D9B5 /* DescriptionTableViewCell.xib in Resources */,
 				526A394022A831ED002AD977 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,16 +393,22 @@
 				F271A02A27431F240099D9B5 /* HomeProtocol.swift in Sources */,
 				F271A02F27431F630099D9B5 /* HomeVC.swift in Sources */,
 				526A396322A84E31002AD977 /* UILabel.swift in Sources */,
+				F271A0562743527A0099D9B5 /* GraphicPresenter.swift in Sources */,
 				526A393922A831EC002AD977 /* AppDelegate.swift in Sources */,
 				526A396022A843D1002AD977 /* BaseViewController.swift in Sources */,
 				F271A03D27432A6B0099D9B5 /* Constants.swift in Sources */,
 				F271A02927431F240099D9B5 /* HomeInteractor.swift in Sources */,
 				F271A02727431F240099D9B5 /* HomePresenter.swift in Sources */,
 				F271A039274324520099D9B5 /* InputTableViewCell.swift in Sources */,
+				F271A0592743527A0099D9B5 /* GraphicProtocol.swift in Sources */,
 				F271A042274335110099D9B5 /* ActionTableViewCell.swift in Sources */,
 				F271A048274348B70099D9B5 /* ShowPhotoVC.swift in Sources */,
 				F271A02827431F240099D9B5 /* HomeRouter.swift in Sources */,
+				F271A0572743527A0099D9B5 /* GraphicRouter.swift in Sources */,
+				F271A04C27434D610099D9B5 /* DescriptionTableViewCell.swift in Sources */,
 				F271A04527433D6A0099D9B5 /* ImagePickerManager.swift in Sources */,
+				F271A05D274352B50099D9B5 /* GraphicVC.swift in Sources */,
+				F271A0582743527A0099D9B5 /* GraphicInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
