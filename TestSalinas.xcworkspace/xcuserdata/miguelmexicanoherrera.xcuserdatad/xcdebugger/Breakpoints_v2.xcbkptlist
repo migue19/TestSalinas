@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "265D56DB-E90C-4F7A-8D48-FD0CA1C4F470"
-            shouldBeEnabled = "Yes"
+            uuid = "D2C15161-D21C-402E-B166-99AE44D4B8E7"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestSalinas/Features/Home/View/HomeVC.swift"
+            filePath = "TestSalinas/Commons/ImagePickerManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "openGallery()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
