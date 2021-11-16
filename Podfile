@@ -6,5 +6,8 @@ target 'TestSalinas' do
   use_frameworks!
 
   # Pods for TestSalinas
-
+  pod 'SwiftLint'	
+  pod 'ConnectionLayer'
+  pod 'NUTComponents'
+  pod 'NutUtils'
 end

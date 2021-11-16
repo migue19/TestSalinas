@@ -1,0 +1,34 @@
+PODS:
+  - ConnectionLayer (0.0.3)
+  - NUTComponents (0.1.2)
+  - NutUtils (1.1.3):
+    - NutUtils/Optionals (= 1.1.3)
+    - NutUtils/UIImage (= 1.1.3)
+    - NutUtils/UIView (= 1.1.3)
+  - NutUtils/Optionals (1.1.3)
+  - NutUtils/UIImage (1.1.3)
+  - NutUtils/UIView (1.1.3)
+  - SwiftLint (0.45.0)
+
+DEPENDENCIES:
+  - ConnectionLayer
+  - NUTComponents
+  - NutUtils
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - ConnectionLayer
+    - NUTComponents
+    - NutUtils
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  ConnectionLayer: 1993c356ebc8d7c99ef59f9a89822d5d21dd360f
+  NUTComponents: 89eec7a960308321f6d96688659e76f989eeca34
+  NutUtils: d49175f79ff7c734a883929916d60d403450bb3f
+  SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
+
+PODFILE CHECKSUM: 3825c6cbc5f7b3a857e86df049b5509770cacec1
+
+COCOAPODS: 1.10.2

@@ -10,17 +10,16 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController {
-    func createView(){}
-    func addViews(){}
-    func setupLayout(){}
-    
-    
+    func setupView() {}
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createView()
-        self.addViews()
-        self.setupLayout()
+        self.setupView()
     }
-    
-    
+    func hideKeyboardTap() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
