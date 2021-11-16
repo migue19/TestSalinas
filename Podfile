@@ -11,4 +11,6 @@ target 'TestSalinas' do
   pod 'NUTComponents'
   pod 'NutUtils'
   pod 'Charts'
+  pod 'lottie-ios'
+  pod 'SwiftMessages'
 end

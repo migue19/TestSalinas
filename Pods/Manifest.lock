@@ -3,6 +3,7 @@ PODS:
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
   - ConnectionLayer (0.0.3)
+  - lottie-ios (3.2.3)
   - NUTComponents (0.1.2)
   - NutUtils (1.1.3):
     - NutUtils/Optionals (= 1.1.3)
@@ -12,29 +13,38 @@ PODS:
   - NutUtils/UIImage (1.1.3)
   - NutUtils/UIView (1.1.3)
   - SwiftLint (0.45.0)
+  - SwiftMessages (9.0.5):
+    - SwiftMessages/App (= 9.0.5)
+  - SwiftMessages/App (9.0.5)
 
 DEPENDENCIES:
   - Charts
   - ConnectionLayer
+  - lottie-ios
   - NUTComponents
   - NutUtils
   - SwiftLint
+  - SwiftMessages
 
 SPEC REPOS:
   trunk:
     - Charts
     - ConnectionLayer
+    - lottie-ios
     - NUTComponents
     - NutUtils
     - SwiftLint
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   ConnectionLayer: 1993c356ebc8d7c99ef59f9a89822d5d21dd360f
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   NUTComponents: 89eec7a960308321f6d96688659e76f989eeca34
   NutUtils: d49175f79ff7c734a883929916d60d403450bb3f
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
+  SwiftMessages: 9cca50659fa22bb523b4dd2a958d4442e843a354
 
-PODFILE CHECKSUM: 9cd6114d1a27b227d8486a74d95f5ea2e54fa74c
+PODFILE CHECKSUM: 46afb71ca1c8d4a5b9e03af8579de5c51a428670
 
 COCOAPODS: 1.10.2
