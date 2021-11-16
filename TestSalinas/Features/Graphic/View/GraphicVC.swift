@@ -22,7 +22,7 @@ class GraphicVC: BaseViewController {
         presenter?.getData()
     }
     override func setupView() {
-        title = "Graficas"
+        title = "section_graphic".localized
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: GraphicTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: GraphicTableViewCell.identifier)

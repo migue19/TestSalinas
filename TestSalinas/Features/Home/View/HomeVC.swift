@@ -7,22 +7,45 @@
 //
 
 import UIKit
-
+import Firebase
 class HomeVC: BaseViewController {
-    var dataSource = ["Input", "Tomar Selfie", "Una gráfica o representación gráfica es un tipo de representación de datos, generalmente numéricos, mediante recursos visuales (líneas, vectores, superficies o símbolos), para que se manifieste visualmente la relación matemática o correlación estadística que guardan entre sí. También es el nombre de un conjunto de puntos que se plasman en coordenadas cartesianas y sirven para analizar el comportamiento de un proceso o un conjunto de elementos o signos que permiten la interpretación de un fenómeno. La representación gráfica permite establecer valores que no se han obtenido experimentalmente sino mediante la interpolación (lectura entre puntos) y la extrapolación (valores fuera del intervalo experimental)."]
+    var dataSource: [String] = []
+    var color: UIColor = .red
     @IBOutlet weak var tableView: UITableView!
     var presenter: HomePresenterProtocol?
+    let rootRef = Database.database().reference()
+    let conditionRef = Database.database().reference().child("background")
 
     override func setupView() {
-        title = "Home"
+        title = "section_home".localized
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: InputTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: InputTableViewCell.identifier)
         tableView.register(UINib(nibName: ActionTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ActionTableViewCell.identifier)
     }
+    override func viewDidLoad() {
+        getData()
+        setupView()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        conditionRef.observe(.value) { [self] (snapshot) in
+            if let receivedColor = snapshot.value as? String {
+            self.color = UIColor(hexString: receivedColor)
+            self.view.backgroundColor = self.color
+            self.tableView.reloadData()
+            }
+        }
+    }
+    func getData() {
+        self.presenter?.getData()
+    }
 }
 /// Protocolo para recibir datos de presenter.
 extension HomeVC: HomeViewProtocol {
+    func showData(data: [String]) {
+        self.dataSource = data
+        self.tableView.reloadData()
+    }
 }
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,12 +58,14 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: InputTableViewCell.identifier) as? InputTableViewCell else {
                 return UITableViewCell()
             }
+            cell.backgroundColor = color
             return cell
         case 1, 2:
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: ActionTableViewCell.identifier) as? ActionTableViewCell else {
                 return UITableViewCell()
             }
             cell.setupCell(text: dataSource[indexPath.row], align: indexPath.row == 1 ? .center: .justified)
+            cell.backgroundColor = color
             return cell
         default:
             return UITableViewCell()

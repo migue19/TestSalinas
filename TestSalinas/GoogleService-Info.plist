@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>727483417226-sho12p705vln1iiursa1ners8776obv0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.727483417226-sho12p705vln1iiursa1ners8776obv0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBji4R-5x7vS2_5D0Ceow8ItQySerInImE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>727483417226</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mx.com.nut.TestSalinas</string>
+	<key>PROJECT_ID</key>
+	<string>testsalinas-240b1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>testsalinas-240b1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:727483417226:ios:78ade3c77cd6ddd56fa373</string>
+	<key>DATABASE_URL</key>
+	<string>https://testsalinas-240b1-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

@@ -25,5 +25,7 @@ extension GraphicPresenter: GraphicInteractorOutputProtocol {
         view?.showData(data: data)
     }
     func sendErrorMessage(message: String) {
+        view?.hideHUD()
+        view?.showMessage(message: message, type: .error)
     }
 }

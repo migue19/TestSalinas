@@ -43,6 +43,7 @@
 		F2E548912743FF1E00EBC7C8 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = F2E548902743FF1E00EBC7C8 /* loader.json */; };
 		F2E548932743FF6D00EBC7C8 /* ProgressViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E548922743FF6D00EBC7C8 /* ProgressViewCustom.swift */; };
 		F2E5489527440ED100EBC7C8 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5489427440ED100EBC7C8 /* BaseProtocol.swift */; };
+		F2E54898274419E500EBC7C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2E54897274419E400EBC7C8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		F2E548902743FF1E00EBC7C8 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		F2E548922743FF6D00EBC7C8 /* ProgressViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCustom.swift; sourceTree = "<group>"; };
 		F2E5489427440ED100EBC7C8 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		F2E54897274419E400EBC7C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		526A393722A831EC002AD977 /* TestSalinas */ = {
 			isa = PBXGroup;
 			children = (
+				F2E54897274419E400EBC7C8 /* GoogleService-Info.plist */,
 				526A393822A831EC002AD977 /* AppDelegate.swift */,
 				F2E5488F2743FE9900EBC7C8 /* Animations */,
 				F2D1DD8127435E51001C1CC4 /* Utils */,
@@ -416,6 +419,7 @@
 				F271A03A274324520099D9B5 /* InputTableViewCell.xib in Resources */,
 				F271A043274335110099D9B5 /* ActionTableViewCell.xib in Resources */,
 				F2D1DD7E27435D7E001C1CC4 /* Localizable.strings in Resources */,
+				F2E54898274419E500EBC7C8 /* GoogleService-Info.plist in Resources */,
 				F271A049274348B70099D9B5 /* ShowPhotoVC.xib in Resources */,
 				526A394022A831ED002AD977 /* Assets.xcassets in Resources */,
 			);

@@ -11,6 +11,7 @@ import UIKit
 /// Protocolo que define los métodos y atributos para el view de Home
 protocol HomeViewProtocol {
     // PRESENTER -> VIEW
+    func showData(data: [String])
 }
 /// Protocolo que define los métodos y atributos para el routing de Home
 protocol HomeRouterProtocol {
@@ -21,12 +22,15 @@ protocol HomeRouterProtocol {
 protocol HomePresenterProtocol {
     // VIEW -> PRESENTER
     func tapGraphicOption()
+    func getData()
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Home
 protocol HomeInteractorInputProtocol {
     // PRESENTER -> INTERACTOR
+    func fetchData()
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Home
 protocol HomeInteractorOutputProtocol {
     // INTERACTOR -> PRESENTER
+    func sendData(data: [String])
 }
