@@ -12,6 +12,7 @@ class GraphicVC: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     var presenter: GraphicPresenterProtocol?
     var dataSource: [QuestionEntity] = []
+    var colors: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +25,14 @@ class GraphicVC: BaseViewController {
         title = "Graficas"
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: InputTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: InputTableViewCell.identifier)
-        tableView.register(UINib(nibName: ActionTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ActionTableViewCell.identifier)
+        tableView.register(UINib(nibName: GraphicTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: GraphicTableViewCell.identifier)
     }
 }
 /// Protocolo para recibir datos de presenter.
 extension GraphicVC: GraphicViewProtocol {
     func showData(data: GraphicEntity) {
         dataSource = data.questions
+        colors = data.colors
         tableView.reloadData()
     }
 
@@ -41,7 +42,11 @@ extension GraphicVC: UITableViewDelegate, UITableViewDataSource {
         return dataSource.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: GraphicTableViewCell.identifier) as? GraphicTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.setupCell(question: dataSource[indexPath.row], colors: colors)
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 400

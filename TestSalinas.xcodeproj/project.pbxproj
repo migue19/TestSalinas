@@ -39,6 +39,7 @@
 		F2D1DD8327435E5F001C1CC4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD8227435E5F001C1CC4 /* Utils.swift */; };
 		F2D1DD8727436139001C1CC4 /* GraphicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD8527436139001C1CC4 /* GraphicTableViewCell.swift */; };
 		F2D1DD8827436139001C1CC4 /* GraphicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D1DD8627436139001C1CC4 /* GraphicTableViewCell.xib */; };
+		F2D1DD8A27436B6B001C1CC4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD8927436B6B001C1CC4 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		F2D1DD8227435E5F001C1CC4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F2D1DD8527436139001C1CC4 /* GraphicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicTableViewCell.swift; sourceTree = "<group>"; };
 		F2D1DD8627436139001C1CC4 /* GraphicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphicTableViewCell.xib; sourceTree = "<group>"; };
+		F2D1DD8927436B6B001C1CC4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				526A396222A84E31002AD977 /* UILabel.swift */,
 				F2D1DD7F27435DD5001C1CC4 /* String.swift */,
+				F2D1DD8927436B6B001C1CC4 /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -458,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\" --fix\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -477,6 +480,7 @@
 				526A396022A843D1002AD977 /* BaseViewController.swift in Sources */,
 				F271A03D27432A6B0099D9B5 /* Constants.swift in Sources */,
 				F271A02927431F240099D9B5 /* HomeInteractor.swift in Sources */,
+				F2D1DD8A27436B6B001C1CC4 /* UIColor.swift in Sources */,
 				F271A02727431F240099D9B5 /* HomePresenter.swift in Sources */,
 				F271A039274324520099D9B5 /* InputTableViewCell.swift in Sources */,
 				F271A0592743527A0099D9B5 /* GraphicProtocol.swift in Sources */,
