@@ -16,10 +16,10 @@ class GraphicTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
     func setupCell(question: QuestionEntity, colors: [String]) {
@@ -27,13 +27,14 @@ class GraphicTableViewCell: UITableViewCell {
         customizeChart(data: question.chartData, colors: colors)
         print(question)
     }
-    
+
     func customizeChart(data: [ChartEntity], colors: [String]) {
-        //, data: $0.text as AnyObject
+        // , data: $0.text as AnyObject
         let dataEntry = data.map({PieChartDataEntry(value: Double($0.percetnage), label: $0.text)})
         let pieChartDataSet = PieChartDataSet(entries: dataEntry, label: nil)
         let aux = colors[0..<dataEntry.count]
         pieChartDataSet.colors = colorsOfCharts(colors: Array(aux))
+        pieChartDataSet.selectionShift = 0
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         let format = NumberFormatter()
         format.numberStyle = .none
@@ -42,7 +43,7 @@ class GraphicTableViewCell: UITableViewCell {
         pieChartView.data = pieChartData
     }
     private func colorsOfCharts(colors: [String]) -> [UIColor] {
-        let newColors = colors.map( { UIColor(hexString: $0) } )
+        let newColors = colors.map({ UIColor(hexString: $0) })
         return newColors
     }
 }

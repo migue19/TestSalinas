@@ -126,8 +126,8 @@
             filePath = "TestSalinas/Features/Graphic/View/Cell/GraphicTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "colorsOfCharts(colors:)"
             landmarkType = "7">
          </BreakpointContent>
