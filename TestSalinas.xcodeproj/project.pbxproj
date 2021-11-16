@@ -40,6 +40,9 @@
 		F2D1DD8727436139001C1CC4 /* GraphicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD8527436139001C1CC4 /* GraphicTableViewCell.swift */; };
 		F2D1DD8827436139001C1CC4 /* GraphicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D1DD8627436139001C1CC4 /* GraphicTableViewCell.xib */; };
 		F2D1DD8A27436B6B001C1CC4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD8927436B6B001C1CC4 /* UIColor.swift */; };
+		F2E548912743FF1E00EBC7C8 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = F2E548902743FF1E00EBC7C8 /* loader.json */; };
+		F2E548932743FF6D00EBC7C8 /* ProgressViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E548922743FF6D00EBC7C8 /* ProgressViewCustom.swift */; };
+		F2E5489527440ED100EBC7C8 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5489427440ED100EBC7C8 /* BaseProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		F2D1DD8527436139001C1CC4 /* GraphicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicTableViewCell.swift; sourceTree = "<group>"; };
 		F2D1DD8627436139001C1CC4 /* GraphicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphicTableViewCell.xib; sourceTree = "<group>"; };
 		F2D1DD8927436B6B001C1CC4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F2E548902743FF1E00EBC7C8 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
+		F2E548922743FF6D00EBC7C8 /* ProgressViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewCustom.swift; sourceTree = "<group>"; };
+		F2E5489427440ED100EBC7C8 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				526A393822A831EC002AD977 /* AppDelegate.swift */,
+				F2E5488F2743FE9900EBC7C8 /* Animations */,
 				F2D1DD8127435E51001C1CC4 /* Utils */,
 				F271A03B27432A570099D9B5 /* Constants */,
 				526A396122A84E0B002AD977 /* Extension */,
@@ -143,6 +150,8 @@
 			children = (
 				526A395F22A843D1002AD977 /* BaseViewController.swift */,
 				F271A04427433D6A0099D9B5 /* ImagePickerManager.swift */,
+				F2E548922743FF6D00EBC7C8 /* ProgressViewCustom.swift */,
+				F2E5489427440ED100EBC7C8 /* BaseProtocol.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -329,6 +338,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F2E5488F2743FE9900EBC7C8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F2E548902743FF1E00EBC7C8 /* loader.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,6 +412,7 @@
 				F2D1DD8827436139001C1CC4 /* GraphicTableViewCell.xib in Resources */,
 				F2D1DD79274358B8001C1CC4 /* GraphicVC.xib in Resources */,
 				F271A03027431F630099D9B5 /* HomeVC.xib in Resources */,
+				F2E548912743FF1E00EBC7C8 /* loader.json in Resources */,
 				F271A03A274324520099D9B5 /* InputTableViewCell.xib in Resources */,
 				F271A043274335110099D9B5 /* ActionTableViewCell.xib in Resources */,
 				F2D1DD7E27435D7E001C1CC4 /* Localizable.strings in Resources */,
@@ -476,6 +494,7 @@
 				526A396322A84E31002AD977 /* UILabel.swift in Sources */,
 				F2D1DD78274358B8001C1CC4 /* GraphicVC.swift in Sources */,
 				F271A0562743527A0099D9B5 /* GraphicPresenter.swift in Sources */,
+				F2E548932743FF6D00EBC7C8 /* ProgressViewCustom.swift in Sources */,
 				526A393922A831EC002AD977 /* AppDelegate.swift in Sources */,
 				526A396022A843D1002AD977 /* BaseViewController.swift in Sources */,
 				F271A03D27432A6B0099D9B5 /* Constants.swift in Sources */,
@@ -487,6 +506,7 @@
 				F271A042274335110099D9B5 /* ActionTableViewCell.swift in Sources */,
 				F2D1DD7C27435B8E001C1CC4 /* GraphicEntity.swift in Sources */,
 				F271A048274348B70099D9B5 /* ShowPhotoVC.swift in Sources */,
+				F2E5489527440ED100EBC7C8 /* BaseProtocol.swift in Sources */,
 				F271A02827431F240099D9B5 /* HomeRouter.swift in Sources */,
 				F2D1DD8327435E5F001C1CC4 /* Utils.swift in Sources */,
 				F271A0572743527A0099D9B5 /* GraphicRouter.swift in Sources */,

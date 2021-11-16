@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 /// Protocolo que define los métodos y atributos para el view de Graphic
-protocol GraphicViewProtocol {
+protocol GraphicViewProtocol: GeneralView {
     // PRESENTER -> VIEW
     func showData(data: GraphicEntity)
 }
