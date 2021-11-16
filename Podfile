@@ -10,4 +10,5 @@ target 'TestSalinas' do
   pod 'ConnectionLayer'
   pod 'NUTComponents'
   pod 'NutUtils'
+  pod 'Charts'
 end

@@ -22,6 +22,7 @@ extension GraphicPresenter: GraphicPresenterProtocol {
 }
 extension GraphicPresenter: GraphicInteractorOutputProtocol {
     func sendData(data: GraphicEntity) {
+        view?.showData(data: data)
     }
     func sendErrorMessage(message: String) {
     }

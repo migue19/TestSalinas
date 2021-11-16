@@ -1,4 +1,7 @@
 PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - ConnectionLayer (0.0.3)
   - NUTComponents (0.1.2)
   - NutUtils (1.1.3):
@@ -11,6 +14,7 @@ PODS:
   - SwiftLint (0.45.0)
 
 DEPENDENCIES:
+  - Charts
   - ConnectionLayer
   - NUTComponents
   - NutUtils
@@ -18,17 +22,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Charts
     - ConnectionLayer
     - NUTComponents
     - NutUtils
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   ConnectionLayer: 1993c356ebc8d7c99ef59f9a89822d5d21dd360f
   NUTComponents: 89eec7a960308321f6d96688659e76f989eeca34
   NutUtils: d49175f79ff7c734a883929916d60d403450bb3f
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
 
-PODFILE CHECKSUM: 3825c6cbc5f7b3a857e86df049b5509770cacec1
+PODFILE CHECKSUM: 9cd6114d1a27b227d8486a74d95f5ea2e54fa74c
 
 COCOAPODS: 1.10.2

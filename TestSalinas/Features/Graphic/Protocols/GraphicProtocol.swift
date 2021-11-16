@@ -11,6 +11,7 @@ import UIKit
 /// Protocolo que define los métodos y atributos para el view de Graphic
 protocol GraphicViewProtocol {
     // PRESENTER -> VIEW
+    func showData(data: GraphicEntity)
 }
 /// Protocolo que define los métodos y atributos para el routing de Graphic
 protocol GraphicRouterProtocol {

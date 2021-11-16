@@ -11,6 +11,7 @@ import UIKit
 class GraphicVC: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     var presenter: GraphicPresenterProtocol?
+    var dataSource: [QuestionEntity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,15 @@ class GraphicVC: BaseViewController {
 }
 /// Protocolo para recibir datos de presenter.
 extension GraphicVC: GraphicViewProtocol {
+    func showData(data: GraphicEntity) {
+        dataSource = data.questions
+        tableView.reloadData()
+    }
+
 }
 extension GraphicVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return dataSource.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()

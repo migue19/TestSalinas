@@ -14,7 +14,7 @@ class GraphicInteractor {
 }
 extension GraphicInteractor: GraphicInteractorInputProtocol {
     func fetchData() {
-        ConnectionLayer().connectionRequest(url: Service.endpoint, method: .get, headers: nil, data: nil) { data, error in
+        ConnectionLayer(isDebug: false).connectionRequest(url: Service.endpoint, method: .get, headers: nil, data: nil) { data, error in
             if let error = error {
                 self.receiveError(message: error)
                 return

@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-TestSalinas/Pods-TestSalinas-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/ConnectionLayer/ConnectionLayer.framework
 ${BUILT_PRODUCTS_DIR}/NUTComponents/NUTComponents.framework
 ${BUILT_PRODUCTS_DIR}/NutUtils/NutUtils.framework
