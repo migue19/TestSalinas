@@ -10,11 +10,10 @@ import Foundation
 import UIKit
 
 class GraphicRouter {
-    private var view: GraphicVC
+    var view: GraphicVC
     private var presenter: GraphicPresenter
     private var interactor: GraphicInteractor
-    private var window: UIWindow?
-    init(in window: UIWindow?) {
+    init() {
         self.view = GraphicVC()
         self.presenter = GraphicPresenter()
         self.interactor = GraphicInteractor()
@@ -23,11 +22,6 @@ class GraphicRouter {
         presenter.interactor = self.interactor
         presenter.router = self
         interactor.presenter = self.presenter
-        self.window = window
-    }
-    func showView() {
-        window?.rootViewController = UINavigationController(rootViewController: view)
-        window?.makeKeyAndVisible()
     }
 }
 extension GraphicRouter: GraphicRouterProtocol {

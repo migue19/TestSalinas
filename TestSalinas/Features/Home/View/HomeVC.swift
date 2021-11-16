@@ -66,7 +66,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                 self.showPhoto(image: image)
             }
         case 2:
-            print("Hohd")
+            self.presenter?.tapGraphicOption()
         default:
             break
         }

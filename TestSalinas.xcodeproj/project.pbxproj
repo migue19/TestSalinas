@@ -234,14 +234,54 @@
 		F271A04E274352250099D9B5 /* Graphic */ = {
 			isa = PBXGroup;
 			children = (
-				F271A0502743527A0099D9B5 /* GraphicPresenter.swift */,
-				F271A0512743527A0099D9B5 /* GraphicRouter.swift */,
-				F271A0522743527A0099D9B5 /* GraphicInteractor.swift */,
-				F271A0532743527A0099D9B5 /* GraphicProtocol.swift */,
+				F271A063274357820099D9B5 /* Protocols */,
+				F271A062274357770099D9B5 /* Router */,
+				F271A061274357680099D9B5 /* Presenter */,
+				F271A060274357580099D9B5 /* Interactor */,
+				F271A05F274357470099D9B5 /* View */,
+			);
+			path = Graphic;
+			sourceTree = "<group>";
+		};
+		F271A05F274357470099D9B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				F271A05B274352B50099D9B5 /* GraphicVC.swift */,
 				F271A05C274352B50099D9B5 /* GraphicVC.xib */,
 			);
-			path = Graphic;
+			path = View;
+			sourceTree = "<group>";
+		};
+		F271A060274357580099D9B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F271A0522743527A0099D9B5 /* GraphicInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F271A061274357680099D9B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F271A0502743527A0099D9B5 /* GraphicPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F271A062274357770099D9B5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F271A0512743527A0099D9B5 /* GraphicRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F271A063274357820099D9B5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F271A0532743527A0099D9B5 /* GraphicProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

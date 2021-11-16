@@ -16,6 +16,9 @@ class HomePresenter {
 
 }
 extension HomePresenter: HomePresenterProtocol {
+    func tapGraphicOption() {
+        router?.showGraphic()
+    }
 }
 extension HomePresenter: HomeInteractorOutputProtocol {
 }

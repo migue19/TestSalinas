@@ -25,4 +25,8 @@ final class HomeRouter {
     }
 }
 extension HomeRouter: HomeRouterProtocol {
+    func showGraphic() {
+        let graphic = GraphicRouter()
+        view.navigationController?.pushViewController(graphic.view, animated: true)
+    }
 }
