@@ -15,6 +15,7 @@ target 'TestSalinas' do
   pod 'SwiftMessages'
   pod 'Firebase'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

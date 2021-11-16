@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 class HomeVC: BaseViewController {
     var dataSource: [String] = []
     var color: UIColor = .red
     @IBOutlet weak var tableView: UITableView!
     var presenter: HomePresenterProtocol?
+    let storageRef = Storage.storage().reference()
     let rootRef = Database.database().reference()
     let conditionRef = Database.database().reference().child("background")
 
@@ -30,14 +32,34 @@ class HomeVC: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         conditionRef.observe(.value) { [self] (snapshot) in
             if let receivedColor = snapshot.value as? String {
-            self.color = UIColor(hexString: receivedColor)
-            self.view.backgroundColor = self.color
-            self.tableView.reloadData()
+                self.color = UIColor(hexString: receivedColor)
+                self.view.backgroundColor = self.color
+                self.tableView.reloadData()
             }
         }
     }
     func getData() {
         self.presenter?.getData()
+    }
+    @IBAction func sendImage(_ sender: Any) {
+        let localFile = Utils.getImagePath()
+        let riversRef = storageRef.child("myImage.png")
+        riversRef.putFile(from: localFile, metadata: nil) { metadata, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            guard let metadata = metadata else {
+                return
+            }
+            print(metadata)
+            riversRef.downloadURL { (url, _) in
+                guard let downloadURL = url else {
+                    return
+                }
+                self.showPhoto(url: downloadURL)
+            }
+        }
     }
 }
 /// Protocolo para recibir datos de presenter.
@@ -98,6 +120,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     func showPhoto(image: UIImage) {
         let imageController = ShowPhotoVC(image: image)
+        self.present(imageController, animated: true, completion: nil)
+    }
+    func showPhoto(url: URL) {
+        let imageController = ShowPhotoVC(url: url)
         self.present(imageController, animated: true, completion: nil)
     }
 }

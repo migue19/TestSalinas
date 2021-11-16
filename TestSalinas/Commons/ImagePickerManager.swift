@@ -61,8 +61,7 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
     }
     func openGallery() {
         alert.dismiss(animated: true, completion: nil)
-        let imageName = "testSalinas"
-        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+        let imagePath = Utils.getImagePath()
         if let loaded = UIImage(contentsOfFile: imagePath.path) {
             pickImageCallback?(loaded)
         }
@@ -76,17 +75,13 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         guard let image = info[.originalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
-        let imageName = "testSalinas"
-        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+
+        let imagePath = Utils.getImagePath()
 
         if let jpegData = image.jpegData(compressionQuality: 0.8) {
             try? jpegData.write(to: imagePath)
         }
         picker.dismiss(animated: true, completion: nil)
         pickImageCallback?(image)
-    }
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
     }
 }

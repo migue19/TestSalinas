@@ -27,4 +27,14 @@ final class Utils {
         }
         return nil
     }
+
+    static func getImagePath() -> URL {
+        let imageName = "testSalinas"
+        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+        return imagePath
+    }
+    static func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
 }
