@@ -13,3 +13,6 @@ struct RegularExpression {
     static let charactersAndSpace = ".*[^A-Za-z ].*"
     static let charactersAndSpaceAndNumbers = ".*[^A-Za-z0-9 ].*"
 }
+struct Service {
+    static let endpoint = "https://us-central1-bibliotecadecontenido.cloudfunctions.net/helloWorld"
+}

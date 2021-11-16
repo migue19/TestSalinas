@@ -16,6 +16,13 @@ class GraphicPresenter {
 
 }
 extension GraphicPresenter: GraphicPresenterProtocol {
+    func getData() {
+        interactor?.fetchData()
+    }
 }
 extension GraphicPresenter: GraphicInteractorOutputProtocol {
+    func sendData(data: GraphicEntity) {
+    }
+    func sendErrorMessage(message: String) {
+    }
 }

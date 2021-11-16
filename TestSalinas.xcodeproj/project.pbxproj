@@ -31,8 +31,12 @@
 		F271A0572743527A0099D9B5 /* GraphicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A0512743527A0099D9B5 /* GraphicRouter.swift */; };
 		F271A0582743527A0099D9B5 /* GraphicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A0522743527A0099D9B5 /* GraphicInteractor.swift */; };
 		F271A0592743527A0099D9B5 /* GraphicProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A0532743527A0099D9B5 /* GraphicProtocol.swift */; };
-		F271A05D274352B50099D9B5 /* GraphicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271A05B274352B50099D9B5 /* GraphicVC.swift */; };
-		F271A05E274352B50099D9B5 /* GraphicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F271A05C274352B50099D9B5 /* GraphicVC.xib */; };
+		F2D1DD78274358B8001C1CC4 /* GraphicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD76274358B8001C1CC4 /* GraphicVC.swift */; };
+		F2D1DD79274358B8001C1CC4 /* GraphicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D1DD77274358B8001C1CC4 /* GraphicVC.xib */; };
+		F2D1DD7C27435B8E001C1CC4 /* GraphicEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD7B27435B8E001C1CC4 /* GraphicEntity.swift */; };
+		F2D1DD7E27435D7E001C1CC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2D1DD7D27435D7E001C1CC4 /* Localizable.strings */; };
+		F2D1DD8027435DD5001C1CC4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD7F27435DD5001C1CC4 /* String.swift */; };
+		F2D1DD8327435E5F001C1CC4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1DD8227435E5F001C1CC4 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +68,12 @@
 		F271A0512743527A0099D9B5 /* GraphicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicRouter.swift; sourceTree = "<group>"; };
 		F271A0522743527A0099D9B5 /* GraphicInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicInteractor.swift; sourceTree = "<group>"; };
 		F271A0532743527A0099D9B5 /* GraphicProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicProtocol.swift; sourceTree = "<group>"; };
-		F271A05B274352B50099D9B5 /* GraphicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicVC.swift; sourceTree = "<group>"; };
-		F271A05C274352B50099D9B5 /* GraphicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphicVC.xib; sourceTree = "<group>"; };
+		F2D1DD76274358B8001C1CC4 /* GraphicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicVC.swift; sourceTree = "<group>"; };
+		F2D1DD77274358B8001C1CC4 /* GraphicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraphicVC.xib; sourceTree = "<group>"; };
+		F2D1DD7B27435B8E001C1CC4 /* GraphicEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicEntity.swift; sourceTree = "<group>"; };
+		F2D1DD7D27435D7E001C1CC4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F2D1DD7F27435DD5001C1CC4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F2D1DD8227435E5F001C1CC4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				526A393822A831EC002AD977 /* AppDelegate.swift */,
+				F2D1DD8127435E51001C1CC4 /* Utils */,
 				F271A03B27432A570099D9B5 /* Constants */,
 				526A396122A84E0B002AD977 /* Extension */,
 				526A395E22A843BB002AD977 /* Commons */,
@@ -109,6 +118,7 @@
 				526A393F22A831ED002AD977 /* Assets.xcassets */,
 				526A394122A831ED002AD977 /* LaunchScreen.storyboard */,
 				526A394422A831ED002AD977 /* Info.plist */,
+				F2D1DD7D27435D7E001C1CC4 /* Localizable.strings */,
 			);
 			path = TestSalinas;
 			sourceTree = "<group>";
@@ -135,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				526A396222A84E31002AD977 /* UILabel.swift */,
+				F2D1DD7F27435DD5001C1CC4 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 		F271A04E274352250099D9B5 /* Graphic */ = {
 			isa = PBXGroup;
 			children = (
+				F2D1DD7A27435B73001C1CC4 /* Entity */,
 				F271A063274357820099D9B5 /* Protocols */,
 				F271A062274357770099D9B5 /* Router */,
 				F271A061274357680099D9B5 /* Presenter */,
@@ -246,8 +258,8 @@
 		F271A05F274357470099D9B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F271A05B274352B50099D9B5 /* GraphicVC.swift */,
-				F271A05C274352B50099D9B5 /* GraphicVC.xib */,
+				F2D1DD76274358B8001C1CC4 /* GraphicVC.swift */,
+				F2D1DD77274358B8001C1CC4 /* GraphicVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +294,22 @@
 				F271A0532743527A0099D9B5 /* GraphicProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F2D1DD7A27435B73001C1CC4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F2D1DD7B27435B8E001C1CC4 /* GraphicEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F2D1DD8127435E51001C1CC4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F2D1DD8227435E5F001C1CC4 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,11 +375,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				526A394322A831ED002AD977 /* LaunchScreen.storyboard in Resources */,
+				F2D1DD79274358B8001C1CC4 /* GraphicVC.xib in Resources */,
 				F271A03027431F630099D9B5 /* HomeVC.xib in Resources */,
 				F271A03A274324520099D9B5 /* InputTableViewCell.xib in Resources */,
 				F271A043274335110099D9B5 /* ActionTableViewCell.xib in Resources */,
+				F2D1DD7E27435D7E001C1CC4 /* Localizable.strings in Resources */,
 				F271A049274348B70099D9B5 /* ShowPhotoVC.xib in Resources */,
-				F271A05E274352B50099D9B5 /* GraphicVC.xib in Resources */,
 				526A394022A831ED002AD977 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +454,9 @@
 			files = (
 				F271A02A27431F240099D9B5 /* HomeProtocol.swift in Sources */,
 				F271A02F27431F630099D9B5 /* HomeVC.swift in Sources */,
+				F2D1DD8027435DD5001C1CC4 /* String.swift in Sources */,
 				526A396322A84E31002AD977 /* UILabel.swift in Sources */,
+				F2D1DD78274358B8001C1CC4 /* GraphicVC.swift in Sources */,
 				F271A0562743527A0099D9B5 /* GraphicPresenter.swift in Sources */,
 				526A393922A831EC002AD977 /* AppDelegate.swift in Sources */,
 				526A396022A843D1002AD977 /* BaseViewController.swift in Sources */,
@@ -435,11 +466,12 @@
 				F271A039274324520099D9B5 /* InputTableViewCell.swift in Sources */,
 				F271A0592743527A0099D9B5 /* GraphicProtocol.swift in Sources */,
 				F271A042274335110099D9B5 /* ActionTableViewCell.swift in Sources */,
+				F2D1DD7C27435B8E001C1CC4 /* GraphicEntity.swift in Sources */,
 				F271A048274348B70099D9B5 /* ShowPhotoVC.swift in Sources */,
 				F271A02827431F240099D9B5 /* HomeRouter.swift in Sources */,
+				F2D1DD8327435E5F001C1CC4 /* Utils.swift in Sources */,
 				F271A0572743527A0099D9B5 /* GraphicRouter.swift in Sources */,
 				F271A04527433D6A0099D9B5 /* ImagePickerManager.swift in Sources */,
-				F271A05D274352B50099D9B5 /* GraphicVC.swift in Sources */,
 				F271A0582743527A0099D9B5 /* GraphicInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

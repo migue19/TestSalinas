@@ -19,12 +19,16 @@ protocol GraphicRouterProtocol {
 /// Protocolo que define los métodos y atributos para el Presenter de Graphic
 protocol GraphicPresenterProtocol {
     // VIEW -> PRESENTER
+    func getData()
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Graphic
 protocol GraphicInteractorInputProtocol {
     // PRESENTER -> INTERACTOR
+    func fetchData()
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Graphic
 protocol GraphicInteractorOutputProtocol {
     // INTERACTOR -> PRESENTER
+    func sendErrorMessage(message: String)
+    func sendData(data: GraphicEntity)
 }
