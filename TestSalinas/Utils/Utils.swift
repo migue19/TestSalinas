@@ -29,7 +29,7 @@ final class Utils {
     }
 
     static func getImagePath() -> URL {
-        let imageName = "testSalinas"
+        let imageName = "app_name".localized
         let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
         return imagePath
     }

@@ -5,6 +5,8 @@
   Created by Miguel Mexicano Herrera on 15/11/21.
   Copyright © 2021 nut. All rights reserved.
 */
+// MARK: - App Name
+"app_name" = "testSalinas";
 // MARK: - Errors
 "self_not_found" = "self-reference not found";
 "data_not_found" = "data not found";
