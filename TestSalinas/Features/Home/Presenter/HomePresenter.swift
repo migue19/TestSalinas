@@ -14,9 +14,9 @@ class HomePresenter {
     var router: HomeRouterProtocol?
 }
 extension HomePresenter: HomePresenterProtocol {
-    func touchSendImage() {
+    func touchSendImage(name: String) {
         view?.showHUD()
-        interactor?.sendImage()
+        interactor?.sendImage(name: name)
     }
     func getData() {
         interactor?.fetchData()

@@ -13,6 +13,7 @@ class HomeVC: BaseViewController {
     var color: UIColor = .red
     @IBOutlet weak var tableView: UITableView!
     var presenter: HomePresenterProtocol?
+    var name: String?
 
     override func setupView() {
         title = "section_home".localized
@@ -29,7 +30,14 @@ class HomeVC: BaseViewController {
         self.presenter?.getData()
     }
     @IBAction func sendImage(_ sender: Any) {
-        self.presenter?.touchSendImage()
+        guard let name = name, !name.isEmpty else {
+            errorNameEmpty()
+            return
+        }
+        self.presenter?.touchSendImage(name: name)
+    }
+    private func errorNameEmpty() {
+        showMessage(message: "home_name_empty".localized, type: .error)
     }
 }
 /// Protocolo para recibir datos de presenter.
@@ -59,6 +67,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: InputTableViewCell.identifier) as? InputTableViewCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             cell.backgroundColor = color
             return cell
         case 1, 2:
@@ -89,12 +98,21 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     func showPickerSelfie() {
-        ImagePickerManager().pickImage(self) { image in
-            self.showPhoto(image: image)
+        ImagePickerManager().pickImage(self) { [weak self] image in
+            self?.showPhoto(image: image)
         }
     }
     func showPhoto(image: UIImage) {
         let imageController = ShowPhotoVC(image: image)
         self.present(imageController, animated: true, completion: nil)
+    }
+}
+extension HomeVC: InputDataDelegate {
+    func sendInputData(name: String) {
+        if name.isEmpty {
+            errorNameEmpty()
+            return
+        }
+        self.name = name
     }
 }

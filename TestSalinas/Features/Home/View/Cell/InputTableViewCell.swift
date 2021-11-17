@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
 class InputTableViewCell: UITableViewCell {
     @IBOutlet weak var nameTextField: UITextField!
     static let identifier = String(describing: InputTableViewCell.self)
+    weak var delegate: InputDataDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,5 +35,10 @@ extension InputTableViewCell: UITextFieldDelegate {
             print("ERROR")
         }
         return true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let name = textField.text {
+            delegate?.sendInputData(name: name)
+        }
     }
 }

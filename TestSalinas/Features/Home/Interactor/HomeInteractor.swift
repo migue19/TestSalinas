@@ -25,9 +25,9 @@ class HomeInteractor {
     }
 }
 extension HomeInteractor: HomeInteractorInputProtocol {
-    func sendImage() {
+    func sendImage(name: String) {
         let localFile = Utils.getImagePath()
-        let riversRef = storageRef.child("myImage.png")
+        let riversRef = storageRef.child("\(name).png")
         riversRef.putFile(from: localFile, metadata: nil) { metadata, error in
             if let error = error {
                 print(error)

@@ -25,13 +25,13 @@ protocol HomePresenterProtocol {
     // VIEW -> PRESENTER
     func tapGraphicOption()
     func getData()
-    func touchSendImage()
+    func touchSendImage(name: String)
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Home
 protocol HomeInteractorInputProtocol {
     // PRESENTER -> INTERACTOR
     func fetchData()
-    func sendImage()
+    func sendImage(name: String)
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Home
 protocol HomeInteractorOutputProtocol {
@@ -39,4 +39,7 @@ protocol HomeInteractorOutputProtocol {
     func sendData(data: [DataHome])
     func sendPhoto(url: URL)
     func sendRemoteConfig(config: RemoteConfig)
+}
+protocol InputDataDelegate: AnyObject {
+    func sendInputData(name: String)
 }
