@@ -22,7 +22,7 @@ extension HomePresenter: HomePresenterProtocol {
     }
 }
 extension HomePresenter: HomeInteractorOutputProtocol {
-    func sendData(data: [String]) {
+    func sendData(data: [DataHome]) {
         view?.showData(data: data)
     }
 }

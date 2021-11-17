@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import NutUtils
 class HomeVC: BaseViewController {
-    var dataSource: [String] = []
+    var dataSource: [DataHome] = []
     var color: UIColor = .red
     @IBOutlet weak var tableView: UITableView!
     var presenter: HomePresenterProtocol?
@@ -64,7 +65,7 @@ class HomeVC: BaseViewController {
 }
 /// Protocolo para recibir datos de presenter.
 extension HomeVC: HomeViewProtocol {
-    func showData(data: [String]) {
+    func showData(data: [DataHome]) {
         self.dataSource = data
         self.tableView.reloadData()
     }
@@ -86,7 +87,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             guard let cell = self.tableView.dequeueReusableCell(withIdentifier: ActionTableViewCell.identifier) as? ActionTableViewCell else {
                 return UITableViewCell()
             }
-            cell.setupCell(text: dataSource[indexPath.row], align: indexPath.row == 1 ? .center: .justified)
+            let text = dataSource[indexPath.row].description
+            cell.setupCell(text: text.valueOrEmpty, align: indexPath.row == 1 ? .center: .justified)
             cell.backgroundColor = color
             return cell
         default:
@@ -95,16 +97,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 60
-        case 1:
-            return 70
-        case 2:
-            return 400
-        default:
-            return 45
-        }
+        let size = dataSource[indexPath.row].sizeCell
+        return size.valueOrZero
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
