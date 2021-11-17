@@ -35,6 +35,7 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     }
     func sendPhoto(url: URL) {
         view?.hideHUD()
+        view?.showMessage(message: "home_upload_success".localized, type: .success)
         view?.showPhoto(url: url)
     }
     func sendData(data: [DataHome]) {
