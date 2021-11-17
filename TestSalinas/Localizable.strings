@@ -11,6 +11,7 @@
 "self_not_found" = "self-reference not found";
 "data_not_found" = "data not found";
 "decode_error" = "Error al decodificar los datos";
+"metadata_not_found" = "No hay metadata";
 // MARK: - Title for Section
 "section_home" = "Home";
 "section_graphic" = "Graficas";

@@ -26,6 +26,10 @@ extension HomePresenter: HomePresenterProtocol {
     }
 }
 extension HomePresenter: HomeInteractorOutputProtocol {
+    func sendError(error: String) {
+        view?.hideHUD()
+        view?.showMessage(message: error, type: .error)
+    }
     func sendRemoteConfig(config: RemoteConfig) {
         view?.updateRemoteConfig(config: config)
     }

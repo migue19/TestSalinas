@@ -39,6 +39,7 @@ protocol HomeInteractorOutputProtocol {
     func sendData(data: [DataHome])
     func sendPhoto(url: URL)
     func sendRemoteConfig(config: RemoteConfig)
+    func sendError(error: String)
 }
 protocol InputDataDelegate: AnyObject {
     func sendInputData(name: String)

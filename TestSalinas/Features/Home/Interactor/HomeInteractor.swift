@@ -29,12 +29,17 @@ extension HomeInteractor: HomeInteractorInputProtocol {
         let formatName = formatNameImage(name: name)
         let localFile = Utils.getImagePath()
         let riversRef = storageRef.child("\(formatName).png")
-        riversRef.putFile(from: localFile, metadata: nil) { metadata, error in
+        riversRef.putFile(from: localFile, metadata: nil) { [weak self] metadata, error in
+            guard let self = self else {
+                print("self_not_found".localized)
+                return
+            }
             if let error = error {
-                print(error)
+                self.sendError(error: error.localizedDescription)
                 return
             }
             guard let metadata = metadata else {
+                self.sendError(error: "metadata_not_found".localized)
                 return
             }
             print(metadata)
@@ -45,6 +50,9 @@ extension HomeInteractor: HomeInteractorInputProtocol {
                 self.presenter?.sendPhoto(url: downloadURL)
             }
         }
+    }
+    private func sendError(error: String) {
+        presenter?.sendError(error: error)
     }
     private func formatNameImage(name: String) -> String {
         var formatName = name.lowercased()
