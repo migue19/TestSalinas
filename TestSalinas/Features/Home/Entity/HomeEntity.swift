@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct DataHome {
     var description: String?
@@ -20,4 +21,8 @@ struct DataHome {
         ]
         return data
     }
+}
+
+struct RemoteConfig {
+    var color: UIColor
 }

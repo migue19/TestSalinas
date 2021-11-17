@@ -7,17 +7,12 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseStorage
 import NutUtils
 class HomeVC: BaseViewController {
     var dataSource: [DataHome] = []
     var color: UIColor = .red
     @IBOutlet weak var tableView: UITableView!
     var presenter: HomePresenterProtocol?
-    let storageRef = Storage.storage().reference()
-    let rootRef = Database.database().reference()
-    let conditionRef = Database.database().reference().child("background")
 
     override func setupView() {
         title = "section_home".localized
@@ -30,44 +25,27 @@ class HomeVC: BaseViewController {
         getData()
         setupView()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        conditionRef.observe(.value) { [self] (snapshot) in
-            if let receivedColor = snapshot.value as? String {
-                self.color = UIColor(hexString: receivedColor)
-                self.view.backgroundColor = self.color
-                self.tableView.reloadData()
-            }
-        }
-    }
     func getData() {
         self.presenter?.getData()
     }
     @IBAction func sendImage(_ sender: Any) {
-        let localFile = Utils.getImagePath()
-        let riversRef = storageRef.child("myImage.png")
-        riversRef.putFile(from: localFile, metadata: nil) { metadata, error in
-            if let error = error {
-                print(error)
-                return
-            }
-            guard let metadata = metadata else {
-                return
-            }
-            print(metadata)
-            riversRef.downloadURL { (url, _) in
-                guard let downloadURL = url else {
-                    return
-                }
-                self.showPhoto(url: downloadURL)
-            }
-        }
+        self.presenter?.touchSendImage()
     }
 }
 /// Protocolo para recibir datos de presenter.
 extension HomeVC: HomeViewProtocol {
+    func updateRemoteConfig(config: RemoteConfig) {
+        self.color = config.color
+        self.view.backgroundColor = config.color
+        self.tableView.reloadData()
+    }
     func showData(data: [DataHome]) {
         self.dataSource = data
         self.tableView.reloadData()
+    }
+    func showPhoto(url: URL) {
+        let imageController = ShowPhotoVC(url: url)
+        self.present(imageController, animated: true, completion: nil)
     }
 }
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
@@ -103,21 +81,20 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 1:
-            ImagePickerManager().pickImage(self) { image in
-                self.showPhoto(image: image)
-            }
+            self.showPickerSelfie()
         case 2:
             self.presenter?.tapGraphicOption()
         default:
             break
         }
     }
+    func showPickerSelfie() {
+        ImagePickerManager().pickImage(self) { image in
+            self.showPhoto(image: image)
+        }
+    }
     func showPhoto(image: UIImage) {
         let imageController = ShowPhotoVC(image: image)
-        self.present(imageController, animated: true, completion: nil)
-    }
-    func showPhoto(url: URL) {
-        let imageController = ShowPhotoVC(url: url)
         self.present(imageController, animated: true, completion: nil)
     }
 }

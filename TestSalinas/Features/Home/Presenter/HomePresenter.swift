@@ -14,6 +14,9 @@ class HomePresenter {
     var router: HomeRouterProtocol?
 }
 extension HomePresenter: HomePresenterProtocol {
+    func touchSendImage() {
+        interactor?.sendImage()
+    }
     func getData() {
         interactor?.fetchData()
     }
@@ -22,6 +25,12 @@ extension HomePresenter: HomePresenterProtocol {
     }
 }
 extension HomePresenter: HomeInteractorOutputProtocol {
+    func sendRemoteConfig(config: RemoteConfig) {
+        view?.updateRemoteConfig(config: config)
+    }
+    func sendPhoto(url: URL) {
+        view?.showPhoto(url: url)
+    }
     func sendData(data: [DataHome]) {
         view?.showData(data: data)
     }

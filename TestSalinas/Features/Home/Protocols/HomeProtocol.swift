@@ -12,6 +12,8 @@ import UIKit
 protocol HomeViewProtocol {
     // PRESENTER -> VIEW
     func showData(data: [DataHome])
+    func showPhoto(url: URL)
+    func updateRemoteConfig(config: RemoteConfig)
 }
 /// Protocolo que define los métodos y atributos para el routing de Home
 protocol HomeRouterProtocol {
@@ -23,14 +25,18 @@ protocol HomePresenterProtocol {
     // VIEW -> PRESENTER
     func tapGraphicOption()
     func getData()
+    func touchSendImage()
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Home
 protocol HomeInteractorInputProtocol {
     // PRESENTER -> INTERACTOR
     func fetchData()
+    func sendImage()
 }
 /// Protocolo que define los métodos y atributos para el Interactor de Home
 protocol HomeInteractorOutputProtocol {
     // INTERACTOR -> PRESENTER
     func sendData(data: [DataHome])
+    func sendPhoto(url: URL)
+    func sendRemoteConfig(config: RemoteConfig)
 }
