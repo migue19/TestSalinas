@@ -26,8 +26,9 @@ class HomeInteractor {
 }
 extension HomeInteractor: HomeInteractorInputProtocol {
     func sendImage(name: String) {
+        let formatName = formatNameImage(name: name)
         let localFile = Utils.getImagePath()
-        let riversRef = storageRef.child("\(name).png")
+        let riversRef = storageRef.child("\(formatName).png")
         riversRef.putFile(from: localFile, metadata: nil) { metadata, error in
             if let error = error {
                 print(error)
@@ -44,6 +45,11 @@ extension HomeInteractor: HomeInteractorInputProtocol {
                 self.presenter?.sendPhoto(url: downloadURL)
             }
         }
+    }
+    private func formatNameImage(name: String) -> String {
+        var formatName = name.lowercased()
+        formatName = formatName.replacingOccurrences(of: " ", with: "")
+        return formatName
     }
     func fetchData() {
         let dataSource = DataHome().getData()
