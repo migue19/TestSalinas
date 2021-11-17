@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 /// Protocolo que define los métodos y atributos para el view de Home
-protocol HomeViewProtocol {
+protocol HomeViewProtocol: GeneralView {
     // PRESENTER -> VIEW
     func showData(data: [DataHome])
     func showPhoto(url: URL)
